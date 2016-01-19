@@ -10,7 +10,7 @@ import os,sys,glob
 import re, requests,urllib2
 
 # User link for repository
-userlink="https://github.com/OAPDF/"
+userlink="https://github.com/oapdf1/"
 # Setup the doilink dir
 
 # doilink dir is for doilink saving
@@ -255,7 +255,7 @@ for prefix in prefixdir:
 			reallink=""
 			if ("redirect" in title):
 				reallink=pl.search(r.text).group()
-				pdflink=userlink+nowdir+"/blob/master/"+prefix+"/"+doiat+".pdf"
+				pdflink=userlink+nowdir+"/raw/master/"+prefix+"/"+doiat+".pdf"
 				#if (not os.path.exists(htmldir)): os.makedirs(htmldir)
 				if (not os.path.exists(pagedir)): os.makedirs(pagedir)
 				##write html page
