@@ -56,4 +56,7 @@ def getpdfdir(doi):
 		return ""
 	
 for f in glob.iglob('10.*/10.*.pdf'):
-	os.renames(f,)
+	paths=os.path.split(f)
+	doi=unquotefileDOI(os.path.splitext(paths[1])[0]).strip()
+	os.renames(f,paths[0]+os.sep+getpdfdir(doi)+paths[1])
+	
